@@ -144,7 +144,7 @@ class CarRentalSystem {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             if (choice == 1) {
                 System.out.println("\n== Rent a Car ==\n");
@@ -163,7 +163,7 @@ class CarRentalSystem {
 
                 System.out.print("Enter the number of days for rental: ");
                 int rentalDays = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
 
                 Customer newCustomer = new Customer("CUS" + (customers.size() + 1), customerName);
                 addCustomer(newCustomer);
@@ -183,7 +183,7 @@ class CarRentalSystem {
                     System.out.println("Customer Name: " + newCustomer.getName());
                     System.out.println("Car: " + selectedCar.getBrand() + " " + selectedCar.getModel());
                     System.out.println("Rental Days: " + rentalDays);
-                    System.out.printf("Total Price: $%.2f%n", totalPrice);
+                    System.out.printf("Total Price: %.2f INR", totalPrice);
 
                     System.out.print("\nConfirm rental (Y/N): ");
                     String confirm = scanner.nextLine();
@@ -243,9 +243,9 @@ public class Car_Rental_App{
     public static void main(String[] args) {
         CarRentalSystem rentalSystem = new CarRentalSystem();
 
-        Car car1 = new Car("C001", "Toyota", "Camry", 60.0); // Different base price per day for each car
-        Car car2 = new Car("C002", "Honda", "Accord", 70.0);
-        Car car3 = new Car("C003", "Mahindra", "Thar", 150.0);
+        Car car1 = new Car("C001", "Toyota", "Camry", 2000); // Different base price per day for each car
+        Car car2 = new Car("C002", "Honda", "Elevet", 2500);
+        Car car3 = new Car("C003", "Mahindra", "Thar", 3000);
         rentalSystem.addCar(car1);
         rentalSystem.addCar(car2);
         rentalSystem.addCar(car3);
