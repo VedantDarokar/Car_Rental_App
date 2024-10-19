@@ -150,6 +150,8 @@ class CarRentalSystem {
                 System.out.println("\n== Rent a Car ==\n");
                 System.out.print("Enter your name: ");
                 String customerName = scanner.nextLine();
+                System.out.println("Enter date you want");
+                Scanner sc= scanner.nextInt();
 
                 System.out.println("\nAvailable Cars:");
                 for (Car car : cars) {
